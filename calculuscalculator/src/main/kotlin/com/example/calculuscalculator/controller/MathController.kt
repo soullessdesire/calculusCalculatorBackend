@@ -20,8 +20,9 @@ class MathController {
             return "Invalid expression"
         }
 
-        val result: IExpr = evaluator.evaluate(expression)
-        return result.toString()
+       val numericExpression = "N($expression)"
+val result: IExpr = evaluator.evaluate(numericExpression)
+return result.toString()
     }
 
     @GetMapping("/differentiate")
